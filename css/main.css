@@ -524,6 +524,15 @@ h6{
 
 .language-btn{
     color: currentColor;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.language-btn:first-child{
+    margin-right: 10px;
+}
+.language-btn:last-child{
+    margin-left: 10px;
 }
 
 .language-btn.active{
