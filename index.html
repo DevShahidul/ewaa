@@ -256,7 +256,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Full name"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Guest Full Name">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -269,7 +269,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Date booked"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Date when Reservation Booked">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -282,7 +282,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Rooms number"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Room number (s)">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -295,7 +295,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Check - In"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Check - in date">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -308,7 +308,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Check - Out"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Check - Out date">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -321,7 +321,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Rooms night"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Number of nights">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -334,7 +334,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Grand total "
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Include all the expenses (Such as rooms, items, taxes, etc.) for this reservation ">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -347,7 +347,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Paid Amount"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Total of whar the customer paid for this reservation">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -360,7 +360,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Res Balance"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="If balance in minus, then the hotel need to pay back the customer with the amount in minus">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -373,7 +373,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Status"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Reservation Status">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -386,7 +386,7 @@
                                             data-bs-trigger="hover focus"
                                             data-bs-custom-class="custom-popover"
                                             data-bs-title="Source"
-                                            data-bs-content="Reservation Sequence ID">
+                                            data-bs-content="Source of reservation">
                                             <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
                                         </button>
                                     </div>
@@ -774,5 +774,11 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
     <!-- JavaScript Bundle with Popper -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+         return new bootstrap.Popover(popoverTriggerEl)
+        });
+    </script>
 </body>
 </html>

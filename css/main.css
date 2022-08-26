@@ -74,6 +74,7 @@
     --font-light: 300;
     --bs-nav-link-font-size: var(--bs-body-font-size);
     --bs-btn-height: 48px;
+    
 }
 
 ::-webkit-scrollbar {
@@ -297,6 +298,12 @@ h6{
     --bs-popover-header-color: var(--bs-blue);
     --bs-popover-body-padding-x: 10px;
     --bs-popover-body-padding-y: .5rem;
+  }
+
+  .popover{
+    --bs-popover-body-color: var(--bs-gray-light);
+    --bs-popover-font-size: 12px;
+    --bs-popover-header-font-size: 12px;
   }
 
 /* Form style */
@@ -577,6 +584,10 @@ h6{
     /* max-width: 246px; */
 }
 
+.filter-row .filter-item{
+    max-width: 23.4%;
+}
+
 .filter-row>*:not(:last-child){
     flex-grow: 1;
 }
@@ -723,4 +734,12 @@ h6{
 
 .status.cancel::before{
     background: var(--bs-gray-3);
+}
+
+/* Popover style */
+.popover-header{
+    padding: 10px 10px 6px;
+}
+.popover-body{
+    padding: 6px 10px 10px;
 }
