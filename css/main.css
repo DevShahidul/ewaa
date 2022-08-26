@@ -79,6 +79,7 @@
 
 ::-webkit-scrollbar {
     width: 2px;
+    height: 5px;
   }
     ::-webkit-scrollbar-track {
     background: var(--bs-gray-2); 
@@ -354,8 +355,10 @@ h6{
 
 /* Sidebar style */
 .sidebar{
-    padding: 1.875rem .75rem 2.25rem 1.5rem;
+    padding: 1.875rem 0 2.25rem 1.5rem;
+    max-height: 100vh;
 }
+
 .logo-wrap{
     color: var(--bs-secondary);
 }
@@ -369,21 +372,22 @@ h6{
     margin-top: 1rem;
     font-weight: var(--font-medium);
     font-size: 100%;
-    width: 100%;
     position: relative;
+    width: calc(100% - .75rem);
+    /* margin-right: .75rem; */
 }
 
 .sidebar .nav-link svg{
     width: 20px;
     height: 20px;
-    margin-right: .875rem;
+    margin-right: .5rem;
 }
-.nav-pills .nav-link svg path,
-.nav-pills .nav-link.active svg path, .nav-pills .show>.nav-link svg path{
+.sidebar .nav-link svg path,
+.sidebar .nav-link.active svg path, .nav-pills .show>.nav-link svg path{
     fill: currentColor;
 }
 
-.nav-pills .nav-link:not(.active):hover{
+.sidebar .nav-link:not(.active):hover{
     color: var(--bs-secondary);
 }
 
@@ -579,18 +583,21 @@ h6{
 .filter-row>*{
     padding-left: calc(.5rem * .5);
     padding-right: calc(.5rem * .5);
-    width: 6.5%;
+    /* width: 6.5%; */
     /* max-width: 24.1%; */
     /* max-width: 246px; */
 }
+.filter-row .filter-item:not(.btn-wrap){
+    width: calc((100% / 4) - (104px / 4));
+}
 
-.filter-row .filter-item{
+/* .filter-row .filter-item{
     max-width: 23.4%;
-}
+} */
 
-.filter-row>*:not(:last-child){
+/* .filter-row>*:not(:last-child){
     flex-grow: 1;
-}
+} */
 
 .card{
     padding-left: 20px;
@@ -620,6 +627,7 @@ h6{
     border: 0;
     height: 46px;
     position: relative;
+    white-space: nowrap;
 }
 .table th:not(:first-child)::before{
     content: "";
@@ -742,4 +750,42 @@ h6{
 }
 .popover-body{
     padding: 6px 10px 10px;
+}
+
+/* Responsive style */
+
+@media screen and (min-width: 1200px) {
+    .sidebar{
+        width: 225px;
+    }
+    .main-container{
+        width: calc(100% - 225px);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .sidebar{
+        width: 70px;
+        padding-left: 0.75rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+    .logo-wrap span{
+        display: none;
+    }
+    .sidebar .nav-link{
+        text-align: center;
+    }
+    .sidebar .nav-link svg{
+        margin-right: 0;
+    }
+    .sidebar .nav-link span{
+        display: none;
+    }
+    .main-container{
+        width: calc(100% - 70px);
+        margin-left: 70px;
+    }
 }
