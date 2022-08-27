@@ -567,8 +567,9 @@ h6{
 .filter-row{
     margin-right: calc(-.5 * .5rem);
     margin-left: calc(-.5 * .5rem);
-    margin-top: calc(.5 * .5rem);
-    margin-bottom: calc(.5 * .5rem);
+}
+.filter-row:first-child{
+    margin-top: calc(-.5 * .5rem);
 }
 
 .filter-row .btn{
@@ -576,19 +577,18 @@ h6{
     height: var(--bs-btn-height)
 }
 
-.filter-row:first-child{
-    margin-top: 0;
-}
-
 .filter-row>*{
     padding-left: calc(.5rem * .5);
     padding-right: calc(.5rem * .5);
-    /* width: 6.5%; */
-    /* max-width: 24.1%; */
-    /* max-width: 246px; */
+    margin-top: calc(.5 * .5rem);
+    margin-bottom: calc(.5 * .5rem);
 }
-.filter-row .filter-item:not(.btn-wrap){
-    width: calc((100% / 4) - (104px / 4));
+.filter-row>*:not(.btn-wrap){
+    flex-grow: 1;
+}
+
+.filter-row .btn-wrap{
+    margin-left: auto;
 }
 
 /* .filter-row .filter-item{
@@ -754,6 +754,11 @@ h6{
 
 /* Responsive style */
 
+@media screen and (min-width: 1025px) {
+    .filter-row .filter-item:not(.btn-wrap){
+        width: calc(100% / 4 - (104px / 4));
+    }
+}
 @media screen and (min-width: 1200px) {
     .sidebar{
         width: 225px;
@@ -788,4 +793,11 @@ h6{
         width: calc(100% - 70px);
         margin-left: 70px;
     }
+}
+
+@media screen and (max-width: 1024px) {
+    /* .filter-row .filter-item:not(.btn-wrap){
+        width: calc(100% / 3 - (102px / 3));
+        max-width: 33.3333%;
+    } */
 }
