@@ -31,6 +31,7 @@
     --bs-gray-light: #B6BEC7;
     --bs-primary: var(--bs-blue);
     --bs-primary-light: #EBEFFE;
+    --bs-primary-light-1: rgba(51, 90, 244, 0.1);
     --bs-secondary: #15134B ;
     --bs-success: var(--bs-green);
     --bs-warning: var(--bs-orange);
@@ -317,7 +318,7 @@ h6{
 .custom-popover {
     --bs-popover-max-width: 196px;
     --bs-popover-border-color: var(--bs-border-color);
-    --bs-popover-header-bg: rgba(51, 90, 244, 0.1);
+    --bs-popover-header-bg: var(--bs-primary-light-1);
     --bs-popover-header-color: var(--bs-blue);
     --bs-popover-body-padding-x: 10px;
     --bs-popover-body-padding-y: .5rem;
@@ -689,14 +690,6 @@ h6{
     margin-left: auto;
 }
 
-/* .filter-row .filter-item{
-    max-width: 23.4%;
-} */
-
-/* .filter-row>*:not(:last-child){
-    flex-grow: 1;
-} */
-
 .page-content-card{
     padding-left: 20px;
 }
@@ -933,6 +926,31 @@ h6{
 
 .user-login .btn-show-value{
     top: 18px;
+}
+
+/* Gobal configuration page style */
+.configuration-card-item{
+    padding: 1.25rem 1.625rem;
+    border-color: var(--bs-white);
+}
+
+
+
+.configuration-card-title-row .icon{
+    width: 47px;
+    height: 47px;
+    border-radius: var(--bs-border-radius);
+    background-color: var(--bs-primary-light-1) ; 
+    margin-bottom: 0;
+}
+
+.configuration-card-title-row .icon ~ .card-title{
+    margin-left: 1rem;
+    margin-bottom: 0;
+}
+
+.configuration-card-title-row .card-title{
+    color: var(--bs-secondary);
 }
 
 /* Responsive style */
