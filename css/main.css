@@ -309,6 +309,11 @@ h6{
     color: var(--bs-primary) !important;
 }
 
+.btn-primary-light:not(.active):hover{
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+
 .btn-delete{
     background-color: var(--bs-red-1);
     color: var(--bs-red);
@@ -998,7 +1003,7 @@ h6{
 .configuration-card-item:hover .configuration-card-title-row .icon,
 .configuration-card-item:hover .btn{
     background-color: var(--bs-primary) !important;
-    color: var(--bs-white);
+    color: var(--bs-white) !important;
 }
 
 .configuration-card-item:hover .btn{
@@ -1167,6 +1172,7 @@ h6{
 }
 
 .config-items-tab .form-control{
+    width: 66px;
     max-width: 66px;
     background-color: var(--bs-white);
     border: 1px solid var(--bs-list-group-border-color);
