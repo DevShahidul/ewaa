@@ -88,6 +88,7 @@
     --progress-bg-orange: #FFF2EE;
     --progress-bg-green: #E4FFE6;
     --progress-bg-purple: #F5EBFF;
+    --dashboard-widget-box-shadow:  0px 20px 45px #F0EDF7;
 }
 
 ::-webkit-scrollbar {
@@ -320,6 +321,18 @@ a:not(.nav-link, .btn):hover{
 .btn-outline-custom:hover{
     border-color: var(--bs-secondary);
     color: var(--bs-secondary);
+}
+
+.blue{
+    color: var(--bs-blue)
+}
+
+.orange{
+    color: var(--bs-orange);
+}
+
+.purple{
+    color: var(--bs-purple);
 }
 
 .soial-icon ~ span{
@@ -1464,6 +1477,25 @@ a:not(.nav-link, .btn):hover{
     max-width: 100%;
 }
 
+
+/* Dashboard page style */
+.dashboard-card-row .widget-card{
+    box-shadow:  --dashboard-widget-box-shadow;
+}
+
+.dashboard-card-row .widget-card h2{
+    margin: 0;
+}
+
+.dashboard-card-row .widget-card .title-text+h2{
+    margin-top: 10px;
+    color: currentColor;
+}
+
+.dashboard-card-row .widget-card h2 span{
+    color: var(--bs-dropdown-item-color);
+}
+
 /* Responsive style */
 @media screen and (min-width: 992px) { 
     .content-wrapper .container{
@@ -1478,6 +1510,10 @@ a:not(.nav-link, .btn):hover{
 
     .new-reservation-contents-row .filter-row .filter-item:not(.btn-wrap){
         width: calc(100% / 3 - (102px / 3));
+    }
+
+    .widget-card{
+        flex-flow: row nowrap;
     }
 }
 
