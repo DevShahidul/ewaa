@@ -1,120 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ewaa | Log in</title>
-    <!-- CSS only -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-    <main class="main d-flex">
-         <div class="content-wrapper bg-white user-login col-12 col-lg-6 col-xl-5">
-            <div class="container">
-                <a href="/" class="navbar-brand d-flex align-items-center text-decoration-none logo-wrap">
-                    <img src="./images/logo.png" width="40px" height="40px" alt="Logo" class="site-logo me-3">
-                    <span class="fs-4 font-bold">EWAA</span>
-                </a>
-                <h1 class="title-text">Login</h1>
-                <form class="needs-validation bordered pt-2" novalidate>
-                    <div class="form-group">
-                        <label for="inputEmail" class="form-label">Email*</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="mail@example.com" required>
-                        <div class="valid-feedback">Looks good!</div>
-                        <div class="invalid-feedback">Please provide a valid email.</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword" class="form-label">Password*</label>
-                        <div class="input-group">
-                            <input type="password" class="form-control" id="inputPassword" placeholder="Min. 8 character" required>
-                            <button class="btn-show-value btn border-0 p-0" type="button">
-                                <img src="./images/icons/fluent_eye-show.png" alt="Eye icon">
-                            </button>
-                            <div class="invalid-feedback">Please provide a valid password.</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ewaa | Log in</title>
+        <!-- CSS only -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+
+    <body>
+        <main class="main d-flex">
+            <div class="content-wrapper bg-white user-login col-12 col-lg-6 col-xl-5">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center text-decoration-none logo-wrap">
+                        <img src="./images/logo.png" width="40px" height="40px" alt="Logo" class="site-logo me-3">
+                        <span class="fs-4 font-bold">EWAA</span>
+                    </a>
+                    <h1 class="title-text">Login</h1>
+                    <form class="needs-validation bordered pt-2" novalidate>
+                        <div class="form-group">
+                            <label for="inputEmail" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="mail@example.com" required>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please provide a valid email.</div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row align-items-center">
-                            <div class="col-12 col-sm-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Default checkbox
-                                    </label>
+                        <div class="form-group">
+                            <label for="inputPassword" class="form-label">Password*</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Min. 8 character" required>
+                                <button class="btn-show-value btn border-0 p-0" type="button">
+                                    <img src="./images/icons/fluent_eye-show.png" alt="Eye icon">
+                                </button>
+                                <div class="invalid-feedback">Please provide a valid password.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 mt-3 mt-sm-0 text-sm-end">
+                                    <a href="#" class="forgot-password-link">Forgot Password?</a>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 mt-3 mt-sm-0 text-sm-end">
-                                <a href="#" class="forgot-password-link">Forgot Password?</a>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary w-100" type="submit">Login</button>
+                        </div>
+                        <div class="form-group font-medium">
+                            <p>Not registered yet? <a href="#" class="body-link">Create an account</a></p>
+                        </div>
+                        <div class="content-divider mt-32 d-flex justify-content-center">
+                            <span>or sign in with</span>
+                        </div>
+                        <div class="row gx-3 mt-24">
+                            <div class="col-12 col-sm-6">
+                                <button class="btn btn-outline-custom btn-social d-flex align-items-center w-100">
+                                    <img src="./images/icons/google-icon.png" class="soial-icon" alt="Google icon">
+                                    <span>Google</span>
+                                </button>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                <button class="btn btn-outline-custom btn-social d-flex align-items-center w-100">
+                                    <img src="./images/icons/facebook-fill.png" class="soial-icon" alt="Facebook icon">
+                                    <span>Facebook</span>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary w-100" type="submit">Login</button>
-                    </div>
-                    <div class="form-group font-medium">
-                        <p>Not registered yet? <a href="#" class="body-link">Create an account</a></p>
-                    </div>
-                    <div class="content-divider mt-32 d-flex justify-content-center">
-                        <span>or sign in with</span>
-                    </div>
-                    <div class="row gx-3 mt-24">
-                        <div class="col-12 col-sm-6">
-                            <button class="btn btn-outline-custom btn-social d-flex align-items-center w-100">
-                                <img src="./images/icons/google-icon.png" class="soial-icon" alt="Google icon">
-                                <span>Google</span>
-                            </button>
-                        </div>
-                        <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                            <button class="btn btn-outline-custom btn-social d-flex align-items-center w-100">
-                                <img src="./images/icons/facebook-fill.png" class="soial-icon" alt="Facebook icon">
-                                <span>Facebook</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-         </div>
-         <div class="figure-wrap col-12 d-none d-lg-block col-lg-6 col-xl-7">
-            <div class="container">
-                <div class="col-12 d-flex justify-content-center">
-                    <h1 class="title-text text-white text-center">Lorem ipsum dolor sit consectetur</h1>
+                    </form>
                 </div>
             </div>
-         </div>
-    </main>
+            <div class="figure-wrap col-12 d-none d-lg-block col-lg-6 col-xl-7">
+                <div class="container">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h1 class="title-text text-white text-center">Lorem ipsum dolor sit consectetur</h1>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
-    <!-- JavaScript Bundle with Popper -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-    'use strict'
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+        <!-- JavaScript Bundle with Popper -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
 
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-                form.classList.add('was-validated')
-            }, false)
-        })
-    })();
-    </script>
-</body>
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })();
+        </script>
+    </body>
+
 </html>
