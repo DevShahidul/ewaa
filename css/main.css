@@ -312,6 +312,7 @@ h6 {
 
 .w-40 {
     width: 2.5rem;
+    min-width: 2.5rem;
 }
 
 a {
@@ -1446,6 +1447,10 @@ a:not(.nav-link, .btn):hover {
     font-size: 1.0625rem;
 }
 
+.create-new-btn span {
+    margin-right: 20px;
+}
+
 .new-reservation-contents-row h4 {
     font-weight: var(--font-medium);
 }
@@ -1600,8 +1605,38 @@ a:not(.nav-link, .btn):hover {
     max-width: 100%;
 }
 
+.navbar-toggler-humburger-icon {
+    width: 32px;
+}
+
+.navbar-toggle-icon {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.navbar-toggle-icon .toggle-line,
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+    width: 32px;
+    height: 2px;
+    display: block;
+    content: "";
+    background-color: var(--bs-primary);
+}
+
+
+.navbar-toggle-icon .toggle-line {
+    margin: 6px 0;
+}
 
 /* Responsive style */
+@media screen and (min-width: 768px) {
+    .ms-md-14 {
+        margin-left: 14px !important;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .content-wrapper .container {
         padding: 51px 7.333% 92px;
@@ -1714,7 +1749,38 @@ a:not(.nav-link, .btn):hover {
 }
 
 @media screen and (max-width: 767px) {
+    .sidebar {
+        width: 255px;
+        transform: translateX(-100%);
+        transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .sidebar.show {
+        transform: translateX(0%);
+    }
+
+    .logo-wrap span,
+    .sidebar .nav-link span {
+        display: inline-block;
+    }
+
+    .sidebar .nav-link {
+        text-align: left;
+    }
+
+    .sidebar .nav-link svg {
+        margin-right: 0.5rem;
+    }
+
+    .main-container {
+        margin-left: 0;
+    }
+
     .step-item span {
         display: none;
+    }
+
+    .config-items-tab .nav-item {
+        width: calc(100% - .75rem);
     }
 }
