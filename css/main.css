@@ -79,7 +79,15 @@
     --font-light: 300;
     --bs-nav-link-font-size: var(--bs-body-font-size);
     --bs-btn-height: 48px;
-    
+    --progress-val: 0;
+    --progress-box-shadow-blue: 0px 33.1034px 55.1724px rgba(199, 194, 227, 0.67);
+    --progress-box-shadow-orange: 0px 33.1034px 55.1724px rgba(255, 209, 194, 0.67);
+    --progress-box-shadow-green: 0px 33.1034px 55.1724px #D3FFD5;
+    --progress-box-shadow-purple: 0px 33.1034px 55.1724px rgba(230, 205, 255, 0.67);
+    --progress-bg-blue: #EFECFF;
+    --progress-bg-orange: #FFF2EE;
+    --progress-bg-green: #E4FFE6;
+    --progress-bg-purple: #F5EBFF;
 }
 
 ::-webkit-scrollbar {
@@ -343,6 +351,96 @@ a:not(.nav-link, .btn):hover{
 .scrollarea{
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+/* Circle Progress styles */
+.circle-progress {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--bs-border-radius-pill);
+    position: relative;
+}
+
+.circle-progress ~ .content{
+    margin-left: 1.5rem;
+}
+
+.circle-progress.blue {
+    box-shadow: var(--progress-box-shadow-blue);
+    color: var(--bs-blue);
+}
+.circle-progress.blue svg{
+    background-color: var(--progress-bg-blue);
+}
+.circle-progress svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    border-radius: 50%;
+    /* -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); */
+ }
+
+ .circle-progress svg  .percent {
+    stroke-dasharray: 100;
+    stroke-dashoffset: calc(100 - var(--round-percent));
+    position: relative;
+    z-index: 1;
+    stroke: currentColor;
+    stroke-linecap: round;
+ }
+
+ .circle-progress h6 {
+    margin-bottom: 0;
+    margin-top: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: currentColor;
+ }
+
+ .circle-progress[data-progress="0"] .percent {
+    --round-percent: 0;
+ }
+
+ .circle-progress[data-progress="13"] .percent {
+    --round-percent: 13;
+ }
+ 
+ .circle-progress[data-progress="25"] .percent {
+    --round-percent: 25;
+ }
+
+ .circle-progress[data-progress="28"] .percent {
+    --round-percent: 28;
+ }
+
+ .circle-progress[data-progress="38"] .percent {
+    --round-percent: 38;
+ }
+
+ .circle-progress[data-progress="50"] .percent {
+    --round-percent: 50;
+ }
+
+ .circle-progress[data-progress="63"] .percent {
+    --round-percent: 63;
+ }
+
+ .circle-progress[data-progress="75"] .percent {
+    --round-percent: 75;
+ }
+
+ .circle-progress[data-progress="83"] .percent {
+    --round-percent: 83;
+ }
+
+.circle-progress[data-progress="100"] .percent {
+    --round-percent: 100;
 }
 
 .card{
