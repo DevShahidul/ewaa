@@ -214,14 +214,14 @@ h6{
     padding-top: 2rem;
 }
 .py-24{
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 .pt-24{
-    padding-top: 1.75rem;
+    padding-top: 1.5rem;
 }
 .pb-24{
-    padding-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
 }
 
 .mx-32{
@@ -230,8 +230,8 @@ h6{
 }
 
 .mx-24{
-    margin-left: 1.75rem;
-    margin-right: 1.75rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .my-32{
@@ -244,42 +244,54 @@ h6{
 }
 
 .my-24{
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .mt-24{
-    margin-top: 1.75rem;
+    margin-top: 1.5rem;
+}
+
+.mt-20{
+    margin-top: 1.25rem;
 }
 
 .ml-14{
-    margin-left: 14px;
+    margin-left: 1em;
 }
 
 .mr-14{
-    margin-right: 14px;
+    margin-right: 1em;
 }
 
 .ml-20{
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .mr-20{
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 .h-40{
-    height: 40px;
+    height: 2.5rem;
 }
 
 .w-40{
-    width: 40px;
+    width: 2.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 .btn{
     /* height: var(--bs-btn-height); */
     padding: .75rem 1.25rem;
-    border-radius: var(--bs-border-radius);
+    --bs-btn-border-radius: var(--bs-border-radius);
     /* min-width: 94px; */
 }
 
@@ -323,7 +335,7 @@ h6{
     color: var(--bs-white) !important;
 }
 
-.btn-delete{
+.btn-delete:not(.bg-none){
     background-color: var(--bs-red-1);
     color: var(--bs-red);
 }
@@ -412,6 +424,16 @@ h6{
 .form-check .form-check-input{
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.form-check.theme-style .form-check-input{
+    width: 20px;
+    height: 20px;
+    border-radius: var(--bs-border-radius-lg);
+    border-color: var(--bs-border-color);
+}
+.form-check.theme-style .form-check-label{
+    padding-left: .75rem;
 }
 
 .invalid-feedback,
@@ -703,9 +725,9 @@ h6{
     margin-top: calc(.5 * .5rem);
     margin-bottom: calc(.5 * .5rem);
 }
-.filter-row>*:not(.btn-wrap){
+/* .filter-row>*:not(.btn-wrap){
     flex-grow: 1;
-}
+} */
 
 .filter-row .btn-wrap{
     margin-left: auto;
@@ -778,6 +800,10 @@ h6{
     min-width: 10px;
     font-size: 12px;
     line-height: 14px;
+}
+
+.table .form-control[type="number"]{
+    text-align: center;
 }
 
 .table-striped>thead>tr>th,
@@ -867,9 +893,9 @@ h6{
     font-size: 17px;
 }
 
-.user-login a{
+/* .user-login a{
     text-decoration: none;
-}
+} */
 
 .user-login .title-text{
     margin-top: 3.75rem;
@@ -877,9 +903,9 @@ h6{
     line-height: 2.625rem;
 }
 
-.user-login a:hover{
+/* .user-login a:hover{
     text-decoration: underline;
-}
+} */
 .content-wrapper .container{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1073,7 +1099,7 @@ h6{
 .breadcrumb a{
     color: currentColor;
     font-weight: var(--font-medium);
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .breadcrumb a:hover{
@@ -1220,19 +1246,143 @@ h6{
     width: 94px;
 }
 
+/* New reservation page style */
+.new-reservation-contents-row .title-text{
+    color: var(--bs-config-title-color);
+    font-size: 1.0625rem;
+}
+
+.new-reservation-contents-row h4{
+    font-weight: var(--font-medium);
+}
+
+.accomodations-card .card-header{
+    padding-bottom: 0;
+}
+
+.accomodations-card .card-header h4{
+    margin-bottom: 0;
+}
+
+.accomodations-card .card-body{
+    background-color: var(--bs-body-bg);
+    padding: 18px;
+}
+
+.accomodations-card .card-body h3{
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.accomodations-card .card-body span{
+    font-weight: var(--font-medium);
+}
+.accomodations-card .card-body span + span{
+    margin-left: 1rem;
+}
+
+.accomodations-card .date-row span{
+    color: var(--bs-gray-light);
+}
+
+.accomodations-card .card-body .date-row span + span{
+    margin-left: 1em;
+}
+
+.step-row{
+    margin: 0;
+    padding: 0;
+    counter-reset: step-counter;
+    list-style: none;
+}
+
+.step-item{
+    color: var(--bs-gray-light);
+    font-weight: var(--font-medium);
+    font-size: 1rem;
+    position: relative;
+}
+
+.step-item.active{
+    color: var(--bs-primary);
+}
+
+.step-item:not(:first-child){
+    margin-left: 1rem;
+}
+
+.step-item:not(:first-child)::before{
+    content: "";
+    border: 2px dashed currentColor;
+    width: 68px;
+    height: 1px;
+    margin-right: 1rem;
+    margin-top: -1px;
+}
+
+.step-item h4{
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.step-item h4::before{
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    min-height: 34px;
+    border-radius: var(--bs-border-radius-pill);
+    background-color: var(--bs-white);
+    color: currentColor;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .75rem;
+}
+
+.step-item.active h4::before{
+    color: var(--bs-white);
+    background-color: var(--bs-primary);
+}
+
+.new-reservation-contents-row .form-check+a{
+    margin-left: 4px;
+    /* text-decoration: none; */
+}
+
+.new-reservation-contents-row .table .btn-add-new{
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 0;
+    --bs-btn-border-radius: var(--bs-border-radius-lg);
+    margin-left: auto;
+}
+
+.new-reservation-contents-row .table .btn-add-new img{
+    max-width: 100%;
+}
 
 /* Responsive style */
-
 @media screen and (min-width: 992px) { 
     .content-wrapper .container{
         padding: 51px 7.333% 92px;
     }
 }
+
 @media screen and (min-width: 1025px) {
     .filter-row .filter-item:not(.btn-wrap){
-        width: calc(100% / 4 - (104px / 4));
+        width: calc(100% / 4 - (102px / 4));
+    }
+
+    .new-reservation-contents-row .filter-row .filter-item:not(.btn-wrap){
+        width: calc(100% / 3 - (102px / 3));
     }
 }
+
 @media screen and (min-width: 1200px) {
     .sidebar{
         width: 225px;
@@ -1245,6 +1395,45 @@ h6{
 @media screen and (min-width: 1360px) {
     .content-wrapper .container{
         padding: 51px 15.333% 92px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1359px) {
+
+    .accomodations-card .card-body .date-row span{
+        display: block;
+        width: 100%;
+    }
+
+    .accomodations-card .card-body .date-row span + span{
+        margin-top: 12px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1359px) {
+    .accomodations-card .card-body .date-row{
+        flex-wrap: wrap;
+    }
+
+    .step-item{
+        align-items: flex-start !important;
+    }
+
+    .step-item h4{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .step-item:not(:first-child)::before{
+        margin-top: 15px;
+    }
+
+    .step-item span{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
     }
 }
 
@@ -1280,4 +1469,10 @@ h6{
         width: calc(100% / 3 - (102px / 3));
         max-width: 33.3333%;
     } */
+}
+
+@media screen and (max-width: 767px) {
+    .step-item span{
+        display: none;
+    }
 }
