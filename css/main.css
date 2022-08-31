@@ -644,6 +644,11 @@ a:not(.nav-link, .btn):hover {
 .sidebar {
     padding: 1.875rem 0 2.25rem 1.5rem;
     max-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
 }
 
 .logo-wrap {
@@ -1566,13 +1571,10 @@ a:not(.nav-link, .btn):hover {
     flex-wrap: wrap;
 }
 
-/* 
-.dashboard-card-row .widget-card .content {
-    width: calc(100% - (64px + 1.5rem));
-} */
 
 .dashboard-card-row .widget-card .circle-progress {
     margin-right: 1.25rem;
+    /* margin-top: 14px !important; */
 }
 
 .dashboard-card-row .widget-card h2 {
@@ -1593,6 +1595,10 @@ a:not(.nav-link, .btn):hover {
     margin-left: 10px;
 }
 
+/* Area Chart style */
+.chart-card img {
+    max-width: 100%;
+}
 
 
 /* Responsive style */
@@ -1620,6 +1626,7 @@ a:not(.nav-link, .btn):hover {
 
     .main-container {
         width: calc(100% - 225px);
+        margin-left: 225px;
     }
 }
 
@@ -1672,7 +1679,6 @@ a:not(.nav-link, .btn):hover {
     .sidebar {
         width: 70px;
         padding-left: 0.75rem;
-        position: absolute;
         left: 0;
         top: 0;
         z-index: 10;
