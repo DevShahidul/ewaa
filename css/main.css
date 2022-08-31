@@ -1764,6 +1764,10 @@ a:not(.nav-link, .btn):hover {
         display: inline-block;
     }
 
+    .sidebar .nav {
+        margin-top: 1rem !important;
+    }
+
     .sidebar .nav-link {
         text-align: left;
     }
@@ -1774,6 +1778,8 @@ a:not(.nav-link, .btn):hover {
 
     .main-container {
         margin-left: 0;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
     }
 
     .step-item span {
