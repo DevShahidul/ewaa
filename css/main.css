@@ -1352,6 +1352,10 @@ a:not(.nav-link, .btn):hover {
     margin-bottom: 0;
 }
 
+.config-items-tab .list-group-item .content {
+    padding-right: 1rem;
+}
+
 .config-items-tab .body-title {
     font-size: 1.0625rem;
 }
