@@ -1794,3 +1794,9 @@ a:not(.nav-link, .btn):hover {
         width: calc(100% - .75rem);
     }
 }
+
+@media screen and (max-width: 575px) {
+    .step-item:not(:first-child)::before {
+        width: 30px;
+    }
+}
