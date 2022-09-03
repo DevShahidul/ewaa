@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
 
 function sidebarExpandOnSmallerScreen() {
    const wndWidth = window.innerWidth;
-   if (wndWidth < smallSidebarScreen && wndWidth > 767) {
+   if (wndWidth > 767 && wndWidth < smallSidebarScreen) {
       if (navLink.length !== 0) {
          navLink.forEach(function (btnToggle) {
             btnToggle.addEventListener("click", function () {
