@@ -923,9 +923,10 @@ a:not(.nav-link, .btn):hover {
 /* Table style */
 .table-wrap {
     margin-top: 12px;
-    overflow: auto;
     max-width: 100%;
-    max-height: calc(100vh - 388px);
+    overflow: auto;
+    /* 
+    max-height: calc(100vh - 388px); */
 }
 
 .table {
@@ -1632,6 +1633,38 @@ a:not(.nav-link, .btn):hover {
 
 .navbar-toggle-icon .toggle-line {
     margin: 6px 0;
+}
+
+/* Front desk page style */
+/* .reservation-list-card .btn-row{
+    margin-left: -.25rem;
+    margin-right: -.25rem;
+} */
+
+.reservation-list-card .btn-row .btn{
+    margin-top: 1em;
+}
+
+.custom-nav-tabs {
+    border: 0px;
+}
+
+.custom-nav-tabs > .nav-link{
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: var(--font-medium);
+    color: var(--bs-gray);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+    margin-bottom: 0;
+}
+
+.custom-nav-tabs > .nav-link.active{
+    color: var(--bs-blue);
+    border-color:  var(--bs-blue);
 }
 
 /* Responsive style */
