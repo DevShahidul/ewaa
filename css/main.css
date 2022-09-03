@@ -650,6 +650,7 @@ a:not(.nav-link, .btn):hover {
     top: 0;
     height: 100vh;
     z-index: 100;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .logo-wrap {
@@ -1756,19 +1757,31 @@ a:not(.nav-link, .btn):hover {
         z-index: 10;
     }
 
+    .sidebar.show{
+        width: 225px;
+    }
+
+    .sidebar .nav-link.btn-toggle::after {
+        opacity: 0;
+    }
+
+    .sidebar.show .nav-link.btn-toggle::after {
+        opacity: 1;
+    }
+
     .logo-wrap span {
         display: none;
     }
 
-    .sidebar .nav-link {
+    .sidebar:not(.show) .nav-link {
         text-align: center;
     }
 
-    .sidebar .nav-link svg {
+    .sidebar:not(.show) .nav-link svg {
         margin-right: 0;
     }
 
-    .sidebar .nav-link span {
+    .sidebar:not(.show) .nav-link span {
         display: none;
     }
 
@@ -1789,7 +1802,6 @@ a:not(.nav-link, .btn):hover {
     .sidebar {
         width: 255px;
         transform: translateX(-100%);
-        transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     .sidebar.show {
