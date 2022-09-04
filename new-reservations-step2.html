@@ -199,7 +199,7 @@
                             <li class="step-item d-flex align-items-center active">
                                 <h4 class="d-flex align-items-center"><span>Children Step 1</span></h4>
                             </li>
-                            <li class="step-item d-flex align-items-center">
+                            <li class="step-item d-flex align-items-center active">
                                 <h4 class="d-flex align-items-center"><span>Children Step 2</span></h4>
                             </li>
                             <li class="step-item d-flex align-items-center">
@@ -216,257 +216,119 @@
                             </div>
                             <div class="card-body rounded mt-4 p-0">
                                 <span>Primary Guest</span>
-                                
+                                <div class="guest-card rounded font-medium">
+                                    Admin
+                                </div>
+                                <div class="btn-row d-flex mt-20">
+                                    <button class="btn btn-primary ms-auto">Add Guest</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-8 mt-24 mt-lg-0">
                         <div class="card px-20 pt-3 page-content-card border-0">
                             <div class="filter-row row">
-                                <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
-                                    <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                                <div class="col-12 col-md-6 col-xl-auto flex-grow-1">
+                                    <input type="text" class="form-control" id="guestId" placeholder="Search Guests by name/Id">
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
-                                    <input type="text" class="form-control" id="guestId" placeholder="Guest ID">
+                                <div class="col-12 col-sm-6 filter-item ms-sm-auto col-md-auto btn-wrap">
+                                    <button class="btn w-100 btn-primary">Clear</button>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
-                                    <input type="text" class="form-control" id="documentNo" placeholder="Document No.">
+                                <div class="col-12 col-sm-6 filter-item col-md-auto btn-wrap">
+                                    <button class="btn w-100 btn-delete font-medium" style="min-width:159px">Remove Guest</button>
                                 </div>
-                                <div class="col-12 filter-item me-sm-auto ms-sm-auto me-md-0 col-md-auto btn-wrap">
-                                    <button class="btn w-100 btn-primary">Search</button>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="form-check d-flex align-items-center theme-style">
-                                    <input class="form-check-input" type="checkbox" value="" id="tableRow-1">
-                                    <label class="form-check-label" for="tableRow-1">
-                                        Non-Refundable
-                                    </label>
-                                </div>
-                                <a href="#">Eligable for 20% discount!</a>
                             </div>
                             <div class="card-body px-0 pt-32">
-                                <h4 class="title-text">Avaibility</h4>
-                                <div class="filter-row row mt-20">
+                                <h4 class="title-text">New Guest</h4>
+                                <div class="filter-row row mt-20 no-button" data-column="3">
                                     <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
-                                        <select class="form-select" aria-label="Display">
-                                            <option selected>Display</option>
+                                        <input type="text" class="form-control" id="guestName" placeholder="Full name">
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <input type="email" class="form-control" id="guestEmail" placeholder="Guest Email">
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="Type of Document">
+                                            <option selected>Type of Document</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div><div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="DocIssueDate">
+                                            <option selected>DocIssueDate</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
                                         </select>
                                     </div>
                                     <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
-                                        <select class="form-select" aria-label="Room types">
-                                            <option selected>Room types</option>
-                                            <option value="1">01/06/2022</option>
-                                            <option value="2">01/06/2022</option>
-                                            <option value="3">01/06/2022</option>
+                                        <select class="form-select" aria-label="DocExDate">
+                                            <option selected>DocExDate</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="Nationality">
+                                            <option selected>Nationality</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="Gender">
+                                            <option selected>Gender</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="table-wrap">
-                                    <table class="table small table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Room Type
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Room Type" data-bs-content="Reservation Sequence ID">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Rate
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Rate" data-bs-content="Guest Full Name">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Taxes
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Taxes" data-bs-content="Date when Reservation Booked">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Check - In
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Check - In" data-bs-content="Check - in date">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Check - Out
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Check - Out" data-bs-content="Check - Out date">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Available
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Available" data-bs-content="Number of nights">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col">
-                                                    <div class="d-flex align-items-center">
-                                                        Quantity
-                                                        <button type="button" class="btn info-btn border-0 d-flex" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover focus" data-bs-custom-class="custom-popover" data-bs-title="Quantity " data-bs-content="Include all the expenses (Such as rooms, items, taxes, etc.) for this reservation ">
-                                                            <img src="./images/icons/info-circle.png" width="14px" height="14px" alt="Info circle icon">
-                                                        </button>
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    #31213
-                                                </th>
-                                                <td class="text-green">SAR 2,400.00</td>
-                                                <td>SAR 420.00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>01/02/23 00:00</td>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <input type="text" class="form-control quantity text-center" value="2">
-                                                        <button class="btn btn-add-new btn-primary-light">
-                                                            <img src="./images/icons/add-icon-blue.png" alt="Add icon" class="default">
-                                                            <img src="./images/icons/add-icon-white.png" alt="Add icon" class="hovered">
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <h4 class="title-text mt-32 mb-3">Address ZIP</h4>
+                                <div class="filter-row row no-button" data-column="3">
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="Country">
+                                            <option selected>Country</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="City">
+                                            <option selected>City</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <input type="email" class="form-control" id="streetName" placeholder="Street Name">
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="Address Info">
+                                            <option selected>Address Info</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 col-xl-auto filter-item">
+                                        <select class="form-select" aria-label="43351">
+                                            <option selected>43351</option>
+                                            <option value="1">43352</option>
+                                            <option value="2">43353</option>
+                                            <option value="3">43354</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="btn-row d-flex mt-20">
+                            <a href="new-reservations.html" class="btn btn-next btn-outline-primary">Previous</a>
                             <a href="#" class="btn btn-next btn-primary-light ms-auto">Next - Guest Info</a>
                         </div>
                     </div>
@@ -474,9 +336,9 @@
             </div>
         </main>
 
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
         <!-- JavaScript Bundle with Popper -->
         <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main-script.js"></script>
         <script>
             var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
             var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {

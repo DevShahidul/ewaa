@@ -324,10 +324,9 @@ a:not(.nav-link, .btn):hover {
 }
 
 .btn {
-    /* height: var(--bs-btn-height); */
     padding: .75rem 1.25rem;
+    white-space: nowrap;
     --bs-btn-border-radius: var(--bs-border-radius);
-    /* min-width: 94px; */
 }
 
 .btn .hovered,
@@ -908,10 +907,6 @@ a:not(.nav-link, .btn):hover {
     margin-top: calc(.5 * .5rem);
     margin-bottom: calc(.5 * .5rem);
 }
-
-/* .filter-row>*:not(.btn-wrap){
-    flex-grow: 1;
-} */
 
 .filter-row .btn-wrap {
     margin-left: auto;
@@ -1668,6 +1663,25 @@ a:not(.nav-link, .btn):hover {
     border-color:  var(--bs-blue);
 }
 
+.guest-card{
+    position: relative;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-primary);
+    margin-top: 12px;
+    padding: 18px;
+    overflow: hidden;
+}
+
+.guest-card::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: currentColor;
+}
+
 /* Responsive style */
 @media screen and (min-width: 768px) {
     .ms-md-14 {
@@ -1686,8 +1700,13 @@ a:not(.nav-link, .btn):hover {
         width: calc(100% / 4 - (102px / 4));
     }
 
-    .new-reservation-contents-row .filter-row .filter-item:not(.btn-wrap) {
+
+    .filter-row[data-column="3"]:not(.no-button) .filter-item:not(.btn-wrap) {
         width: calc(100% / 3 - (102px / 3));
+    }
+
+    .filter-row[data-column="3"] .filter-item:not(.btn-wrap) {
+        width: calc(100% / 3);
     }
 
 }
