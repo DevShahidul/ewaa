@@ -650,6 +650,7 @@ a:not(.nav-link, .btn):hover {
     top: 0;
     height: 100vh;
     z-index: 100;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .logo-wrap {
@@ -923,9 +924,10 @@ a:not(.nav-link, .btn):hover {
 /* Table style */
 .table-wrap {
     margin-top: 12px;
-    overflow: auto;
     max-width: 100%;
-    max-height: calc(100vh - 388px);
+    overflow: auto;
+    /* 
+    max-height: calc(100vh - 388px); */
 }
 
 .table {
@@ -1634,6 +1636,38 @@ a:not(.nav-link, .btn):hover {
     margin: 6px 0;
 }
 
+/* Front desk page style */
+/* .reservation-list-card .btn-row{
+    margin-left: -.25rem;
+    margin-right: -.25rem;
+} */
+
+.reservation-list-card .btn-row .btn{
+    margin-top: 1em;
+}
+
+.custom-nav-tabs {
+    border: 0px;
+}
+
+.custom-nav-tabs > .nav-link{
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: var(--font-medium);
+    color: var(--bs-gray);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+    margin-bottom: 0;
+}
+
+.custom-nav-tabs > .nav-link.active{
+    color: var(--bs-blue);
+    border-color:  var(--bs-blue);
+}
+
 /* Responsive style */
 @media screen and (min-width: 768px) {
     .ms-md-14 {
@@ -1723,19 +1757,31 @@ a:not(.nav-link, .btn):hover {
         z-index: 10;
     }
 
+    .sidebar.show{
+        width: 225px;
+    }
+
+    .sidebar .nav-link.btn-toggle::after {
+        opacity: 0;
+    }
+
+    .sidebar.show .nav-link.btn-toggle::after {
+        opacity: 1;
+    }
+
     .logo-wrap span {
         display: none;
     }
 
-    .sidebar .nav-link {
+    .sidebar:not(.show) .nav-link {
         text-align: center;
     }
 
-    .sidebar .nav-link svg {
+    .sidebar:not(.show) .nav-link svg {
         margin-right: 0;
     }
 
-    .sidebar .nav-link span {
+    .sidebar:not(.show) .nav-link span {
         display: none;
     }
 
@@ -1756,7 +1802,6 @@ a:not(.nav-link, .btn):hover {
     .sidebar {
         width: 255px;
         transform: translateX(-100%);
-        transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     .sidebar.show {
